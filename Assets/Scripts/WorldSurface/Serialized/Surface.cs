@@ -5,14 +5,17 @@ using UnityEngine;
 namespace ProjectStardust.WorldSurface.Serialized
 {
 [Serializable]
-internal struct WorldSurface
+public class Surface
 {
 	public int Width;
 	public int Height;
 	public TileType[] TileTypes;
 	public int[] ResourceLevels;
 
-	public static WorldSurface CreateDefault()
+	private Surface()
+	{}
+
+	public static Surface CreateDefault()
 	{
 		return new()
 		{
@@ -41,7 +44,7 @@ internal struct WorldSurface
 		return WrapIndex(x, y, Width, Height);
 	}
 
-	public WorldSurface Resize(int width, int height)
+	public Surface Resize(int width, int height)
 	{
 		var tileTypes = new TileType[width * height];
 		var resourceLevels = new int[width * height];
@@ -54,6 +57,11 @@ internal struct WorldSurface
 		}
 
 		return this;
+	}
+
+	public TileType GetTileTypeAt(int x, int y)
+	{
+		return TileTypes[WrapIndex(x, y, Width, Height)];
 	}
 }
 }
