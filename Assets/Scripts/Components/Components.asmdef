@@ -1,0 +1,17 @@
+{
+    "name": "ProjectStardust.Components",
+    "rootNamespace": "ProjectStardust.Components",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:779d8f1bf3888474b8fd9b1244f81905"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
