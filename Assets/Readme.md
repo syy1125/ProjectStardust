@@ -5,6 +5,10 @@
 
 # Script Modules
 
-- Components: General purpose, game-agnostic components that can be useful in many games.
-- WorldSurface: Code relating to processing and manipulating the surface of a world.
-- MapEditor: Code relating to creating a game map.
+- Library modules: General purpose root modules
+    - Components: General purpose, game-agnostic components that can be useful in many games.
+- Gameplay modules: Concepts used across the entire game
+    - WorldSurface: Code relating to processing and manipulating the surface of a world.
+    - Gameplay: Module uniting all gameplay modules.
+- User modules: Concepts used in a specific situation
+    - MapEditor: Code relating to creating a game map.
