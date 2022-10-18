@@ -3,6 +3,7 @@
     "rootNamespace": "ProjectStardust.MapEditor",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:8ed90e0cadeb1a7409961dba3171731a",
         "GUID:e581eff280cd6394aaf3ba69a8a0796f"
     ],
     "includePlatforms": [],

@@ -1,7 +1,9 @@
 {
     "name": "ProjectStardust.WorldSurface",
     "rootNamespace": "ProjectStardust.WorldSurface",
-    "references": [],
+    "references": [
+        "GUID:8ed90e0cadeb1a7409961dba3171731a"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

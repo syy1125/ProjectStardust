@@ -38,13 +38,7 @@ public class Surface
 		return (i % width, i / width);
 	}
 
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public int WrapIndex(int x, int y)
-	{
-		return WrapIndex(x, y, Width, Height);
-	}
-
-	public Surface Resize(int width, int height)
+	public void Resize(int width, int height)
 	{
 		var tileTypes = new TileType[width * height];
 		var resourceLevels = new int[width * height];
@@ -55,13 +49,26 @@ public class Surface
 			Array.Copy(TileTypes, y * Width, tileTypes, y * width, copyWidth);
 			Array.Copy(ResourceLevels, y * Width, resourceLevels, y * width, copyWidth);
 		}
-
-		return this;
 	}
 
 	public TileType GetTileTypeAt(int x, int y)
 	{
 		return TileTypes[WrapIndex(x, y, Width, Height)];
+	}
+
+	public void SetTileTypeAt(int x, int y, TileType tileType)
+	{
+		TileTypes[WrapIndex(x, y, Width, Height)] = tileType;
+	}
+
+	public int GetResourceLevelAt(int x, int y)
+	{
+		return ResourceLevels[WrapIndex(x, y, Width, Height)];
+	}
+
+	public void SetResourceLevelAt(int x, int y, int resourceLevel)
+	{
+		ResourceLevels[WrapIndex(x, y, Width, Height)] = resourceLevel;
 	}
 }
 }
